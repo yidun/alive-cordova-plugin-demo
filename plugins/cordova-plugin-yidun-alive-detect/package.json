@@ -1,0 +1,53 @@
+{
+  "_from": "cordova-plugin-yidun-alive-detect",
+  "_id": "cordova-plugin-yidun-alive-detect@0.1.0",
+  "_inBundle": false,
+  "_integrity": "sha512-6KlKRyDaIvLRTUHalKQsZlyq2XoO+SBeIXJ97wcJQSvnjQau33t6U4ji7G8E6WLHefNuBQmmeZqsP9zWzxbbvg==",
+  "_location": "/cordova-plugin-yidun-alive-detect",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-yidun-alive-detect",
+    "name": "cordova-plugin-yidun-alive-detect",
+    "escapedName": "cordova-plugin-yidun-alive-detect",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-yidun-alive-detect/-/cordova-plugin-yidun-alive-detect-0.1.0.tgz",
+  "_shasum": "e08d1199f9097985f7c7778d1bac875e36134971",
+  "_spec": "cordova-plugin-yidun-alive-detect",
+  "_where": "E:\\workspace\\cordova\\cordova-yidun-alive-detect-dmeo",
+  "author": {
+    "name": "yidun"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "yidun alive detect cordova plugin",
+  "homepage": "https://github.com/yidun/alive-cordova-plugin",
+  "keywords": [
+    "cordova",
+    "phonegap",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "android",
+    "ios",
+    "ionic",
+    "yidun",
+    "alive-detect",
+    "活体检测",
+    "易盾"
+  ],
+  "license": "Apache 2.0",
+  "name": "cordova-plugin-yidun-alive-detect",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.1.0"
+}
