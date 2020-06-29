@@ -84,7 +84,7 @@ var app = {
       }
       
       // 检测失败
-      if (ev['error_code']) {
+      if (ev['error_code'] || ev['error_code'] === 0) {
         const err = new Error(`${ev['error_code']}: ${ev.msg}`);
         err.code = ev['error_code'];
         this.$resultEl.innerText = '检测失败';
