@@ -43,20 +43,27 @@ var app = {
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
-        const detector = new YidunAliveDetect({
-          x: 100,
-          y: 100,
-          width: 180,
-          height: 240,
-          radius: 90,
-          businessId: '从易盾申请到的id'
-        }, this.handleDetectCb.bind(this));
+        let detector = null
         
+        const callback = this.handleDetectCb.bind(this)
+        document.getElementById('initDetectBtn').addEventListener('click', function () {
+          detector = new YidunAliveDetect({
+            x: 100,
+            y: 100,
+            width: 180,
+            height: 240,
+            radius: 90,
+            businessId: '从易盾申请到的id'
+          }, callback);
+        });
         document.getElementById('startDetectBtn').addEventListener('click', function () {
-          detector.startDetect();
+          detector && detector.startDetect();
         });
         document.getElementById('stopDetectBtn').addEventListener('click', function () {
-          detector.stopDetect();
+          detector && detector.stopDetect();
+        });
+        document.getElementById('removeDetectBtn').addEventListener('click', function () {
+          detector && detector.removeDetect();
         });
     },
     
