@@ -18,8 +18,9 @@
     under the License.
 -->
 <html>
-    <head>
-        <!--
+
+<head>
+    <!--
         Customize this policy to fit your own app's needs. For more guidance, see:
             https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
         Some notes:
@@ -28,31 +29,89 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>Hello Yidun Alive Detect</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>易盾活体检测接入demo</h1>
-            <div class="detect-main">
-              <button class="detect-btn" id="initDetectBtn">初始化</button>
-              <button class="detect-btn" id="startDetectBtn">开始检测</button>
-              <button class="detect-btn" id="stopDetectBtn">暂停检测</button>
-              <button class="detect-btn" id="removeDetectBtn">移除销毁</button>
-              <div class="detect-result">
-                <span class="detect-result__label">检测结果：</span>
-                <span id="detectResult"></span>
-              </div>
-              <p class="detect-action">提示: <span id="detectAction"></span></p>
-              <p>debug: <span id="debug"></span></p>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>易盾活体检测</title>
+</head>
+
+<body>
+    <div class="demo step-1">
+        <div class="demo__content">
+            <div class="home">
+                <header>
+                    <i class="home__logo"></i>
+                    <span class="home__welcome">欢迎体验，</span>
+                    <h1 class="home__title">易盾活体检测DEMO</h1>
+                </header>
+                <section class="home__body">
+                    <ul class="home-tip">
+                        <li class="home-tip__item">请在明亮的光线环境下使用</li>
+                        <li class="home-tip__item">不要遮挡面部</li>
+                        <li class="home-tip__item">正握手机，人脸正对屏幕</li>
+                    </ul>
+                    <button class="home__btn j-trial">开始活体检测</button>
+                </section>
+            </div>
+            <div class="check">
+                <header class="check__header">
+                    <h1 class="check__title">易盾活体检测</h1>
+                </header>
+                <section class="check__body">
+                    <div class="check-tool">
+                        <button class="check-tool__audio j-audio">音频</button>
+                        <div class="check-tool__timer progress-timer">
+                            <span class="progress-timer__secs j-secs"></span>
+                            <div class="progress-timer__right">
+                                <span class="progress-timer__circle"></span>
+                            </div>
+                            <div class="progress-timer__left">
+                                <span class="progress-timer__circle"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="check-process">
+                        <div class="check-exception__tip j-exception-tip"></div>
+                        <div class="check-process__tip j-action-tip"></div>
+                        <img class="check-process__img j-action-img" src="./assets/open_eyes.gif" />
+                        <ul class="check-steps">
+                            <li class="check-step__item active">1</li>
+                            <li class="check-step__item">2</li>
+                            <li class="check-step__item">3</li>
+                            <li class="check-step__item">4</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <div class="result">
+                <header class="result__header">
+                    <a class="result__back j-back" href="javascript:void(0);">返回首页</a>
+                    <h1 class="result__title">检测结果</h1>
+                    <span></span>
+                </header>
+                <section class="result__body">
+                    <div class="result-success">
+                        <div class="result-success__trial">
+                            <i class="result-success__icon"></i>
+                            <header class="result-success__msg j-msg">活体检测通过</header>
+                            <a class="result-success__back j-back" href="javascript:void(0);">返回首页</a>
+                            <div class="copy">
+                                <label class="copy__label">Token:</label>
+                                <input class="copy__input" id="checkToken" readonly />
+                                <button class="copy__btn" id="copyToken">复制</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-    </body>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
 </html>
