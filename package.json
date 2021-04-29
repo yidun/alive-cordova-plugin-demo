@@ -20,7 +20,7 @@
     "cordova-plugin-file": "^6.0.2",
     "cordova-plugin-media": "^5.0.3",
     "cordova-plugin-wkwebview-engine": "^1.2.1",
-    "cordova-plugin-yidun-alive-detect": "^0.1.7",
+    "@yidun/livedetect-plugin-cordova": "^0.1.8"
     "eeschiavo-cordova-plugin-clipboard": "^1.0.2"
   },
   "devDependencies": {
